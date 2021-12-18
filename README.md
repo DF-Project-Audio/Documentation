@@ -6,7 +6,9 @@ Here you can find documentation for v2 of our API!
 
 ## API Docs
 [Playing Audio](#Playing%20Audio)
+
 [Stopping Audio](#Stopping%20Audio)
+
 [Audio Sources](#Audio%20Sources)
 
 
