@@ -2,10 +2,15 @@
 
 Project Audio is a project for DiamondFire plots that allow you to play full quality audio through our api!
 
+## API Docs
+[Playing Audio](#Playing%20Audio)
+[Stopping Audio](#Stopping%20Audio)
+[Audio Sources](#Audio%20Sources)
+
 
 ## Playing Audio
 
-Playing audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **[SendWebRequest](#SendWebRequest%20CodeBlock** code block!
+Playing audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **[SendWebRequest](#SendWebRequest%20CodeBlock)** code block!
 
 The URL format is as follows https://audio.tomoli.me/api/v2/play/[player](#Player%20Paramater)/[title](#Title%20Paramater)/[loop](#Loop%20Paramater)/
 
