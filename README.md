@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+# Project: Audio Documentation
 
-You can use the [editor on GitHub](https://github.com/DF-Project-Audio/Documentation/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Project Audio is a project for DiamondFire plots that allow you to play full quality audio through our api!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Playing Audio
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Playing audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **SendWebRequest** code block!
+![SendWebRequest](https://raw.githubusercontent.com/DF-Project-Audio/Documentation/main/images/SendWebRequest.png)
 
-```markdown
-Syntax highlighted code block
+The URL format is as follows https://audio.tomoli.me/api/v2/play/[player](#Player Paramater)/[title](#Title Paramater)/[loop](#Loop Paramater)/
 
-# Header 1
-## Header 2
-### Header 3
+The [audio source](#Audio Sources) should be placed in the body.
 
-- Bulleted
-- List
+## Stopping Audio
 
-1. Numbered
-2. List
+Stopping audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **SendWebRequest** code block!
+![SendWebRequest](https://raw.githubusercontent.com/DF-Project-Audio/Documentation/main/images/SendWebRequest.png)
 
-**Bold** and _Italic_ and `Code` text
+The URL format is as follows https://audio.tomoli.me/api/v2/stop/[player](#Player Paramater)/
 
-[Link](url) and ![Image](src)
-```
+## Audio Sources
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+There are many ways to directly provide audio to play in Project Audio!
 
-### Jekyll Themes
+### Direct URL
+This should be provided by you, and is perfect for maximum customisation. Just provide the web-accessable url, ending with a file extention like .mp3, as part of the request.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DF-Project-Audio/Documentation/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### TTS
+We provide free access to the basic (Google Translate style) TTS service from Google. 
 
-### Support or Contact
+The URL format is as follows:
+https://audio.tomoli.me/api/v2/source/tts/[text].mp3 *(Replace [text] with the [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.ASP) text you want to use.)*
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### GLaDOS TTS
+We also provide access to GLaDOS TTS, recommended for use in puzzle-style games. 
+
+The URL format is as follows:
+https://audio.tomoli.me/api/v2/source/glados/[text].mp3 *(Replace [text] with the [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.ASP) text you want to use.)*
+
+### YouTube
+Furthermore, we provide the ability to play YouTube videos (audio only) via the service. 
+
+The URL format is as follows:
+https://audio.tomoli.me/api/v2/source/yt/[id].mp3 *(Replace [id] with the YouTube video id you want to play. For example, dQw4w9WgXcQ plays a rick-roll)*
