@@ -5,19 +5,17 @@ Project Audio is a project for DiamondFire plots that allow you to play full qua
 
 ## Playing Audio
 
-Playing audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **SendWebRequest** code block!
-![SendWebRequest](https://raw.githubusercontent.com/DF-Project-Audio/Documentation/main/images/SendWebRequest.png)
+Playing audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **[SendWebRequest](#SendWebRequest%20CodeBlock** code block!
 
-The URL format is as follows https://audio.tomoli.me/api/v2/play/[player](#Player Paramater)/[title](#Title Paramater)/[loop](#Loop Paramater)/
+The URL format is as follows https://audio.tomoli.me/api/v2/play/[player](#Player%20Paramater)/[title](#Title%20Paramater)/[loop](#Loop%20Paramater)/
 
 The [audio source](#Audio Sources) should be placed in the body.
 
 ## Stopping Audio
 
-Stopping audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **SendWebRequest** code block!
-![SendWebRequest](https://raw.githubusercontent.com/DF-Project-Audio/Documentation/main/images/SendWebRequest.png)
+Stopping audio with **Project Audio** is easy you send a URL **post request** from your plot using DiamondFire's **[SendWebRequest](#SendWebRequest%20CodeBlock)** code block!
 
-The URL format is as follows https://audio.tomoli.me/api/v2/stop/[player](#Player Paramater)/
+The URL format is as follows https://audio.tomoli.me/api/v2/stop/[player](#Player%20Paramater)/
 
 ## Audio Sources
 
@@ -43,3 +41,25 @@ Furthermore, we provide the ability to play YouTube videos (audio only) via the 
 
 The URL format is as follows:
 https://audio.tomoli.me/api/v2/source/yt/[id].mp3 *(Replace [id] with the YouTube video id you want to play. For example, dQw4w9WgXcQ plays a rick-roll)*
+
+## Paramaters
+
+Paramaters are sections of the URL that you substitute in for your data!
+
+### Player Paramater
+
+This is the player’s username you want to play the music to. The player must be on your plot.
+*You may also use multiple players by joining there names with a , for example: TechStreet,Tomoli75)*
+
+### Title Paramater
+
+This is the title that will show up in the web interface. Preferably, this will be the song title or the announcement title - e.g. if you wish to rick-roll people listening, you would put “Never Gonna Give You Up - Rick Astley” as the title.
+
+**You must encode this with URL encoding documentation for this can be found [here](https://www.w3schools.com/tags/ref_urlencode.ASP)**
+
+### Loop Paramater
+
+This should be either true or false. If true, the audio will loop.
+
+## SendWebRequest CodeBlock
+![SendWebRequest](https://raw.githubusercontent.com/DF-Project-Audio/Documentation/main/images/SendWebRequest.png)
