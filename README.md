@@ -2,6 +2,8 @@
 
 Project Audio is a project for DiamondFire plots that allow you to play full quality audio through our api!
 
+Here you can find documentation for v2 of our API!
+
 ## API Docs
 [Playing Audio](#Playing%20Audio)
 [Stopping Audio](#Stopping%20Audio)
